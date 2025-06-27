@@ -1,5 +1,7 @@
 import Logo from "../components/logoSing/Logo"
 import './signUp.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 function SignUp() {
   return (
@@ -8,13 +10,15 @@ function SignUp() {
             <div className="logoContainer">
                 <Logo/>
             </div>
-            <div className="signUpInput">
+            <div className="signUpInputContainer">
                 <h1>реєстрація</h1>
-                <input type="text" placeholder="e-mail"/>
-                <input type="text" placeholder="ім'я"/>
-                <input type="text" placeholder="пароль"/>
-                <button>реєстрація</button>
-                <div className="googleLogo"></div>
+                <input className="signUpInput" type="text" placeholder="e-mail"/>
+                <input className="signUpInput" type="text" placeholder="ім'я"/>
+                <input className="signUpInput" type="text" placeholder="пароль"/>
+                <div className="signUpBTNContainer">
+                  <button className="signUpInputBTN">реєстрація</button>
+                  <FontAwesomeIcon className="googleLogo" icon={faGoogle} />                 
+                </div>
             </div>
         </div>
     </div>
