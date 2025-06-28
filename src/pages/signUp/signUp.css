@@ -22,7 +22,7 @@
     width: 100%;
     align-items: center;
     justify-content: center;
-    gap: 2em;
+    gap: 1em;
 }
 .signUpInputContainer h1{
     text-transform: uppercase;
