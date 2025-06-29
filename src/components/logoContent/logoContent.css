@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.LogoContentBody {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10%;
+  font-size: 3em;
+}
+.logoContentText {
+  text-transform: uppercase;
+  height: fit-content;
+  font-size: 2em;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  color: #000000;
+}
+.mainContentLetter {
+  color: #ff5858;
+}
