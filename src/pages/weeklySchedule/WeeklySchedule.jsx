@@ -15,18 +15,17 @@ function WeeklySchedule() {
             <h1>понеділок</h1>
             <h1>01.12</h1>
           </div>
-          <div className="appointmentBox">
-          <Appointment/>
-          <Appointment/>
-          <Appointment/>            
-          <Appointment/>            
-          <Appointment/>            
-          <Appointment/>            
-          <Appointment/>            
-          <Appointment/>            
-          <Appointment/>            
-          <Appointment/>            
-          <Appointment/>            
+          <div className="appointmentBox">  
+            <Appointment/>        
+            <Appointment/>        
+            <Appointment/>        
+            <Appointment/>        
+            <Appointment/>        
+            <Appointment/>        
+            <Appointment/>        
+            <Appointment/>        
+            <Appointment/>        
+            <Appointment/>        
           </div>
           <div className="dayStuff">
             <div><h1>лікар</h1><h1 className="dayStuffName">Тодосюк Данило</h1></div>
