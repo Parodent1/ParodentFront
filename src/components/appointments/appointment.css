@@ -1,0 +1,12 @@
+.appointmentBody{
+    border: 1px solid red;
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+}
+.clientName{
+    font-size: 1em;
+}
+.appointmentTime{
+    font-size: 1em;
+}

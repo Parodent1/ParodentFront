@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.weeklyScheduleBody {
+  border: 1px solid black;
+  height: 100vh;
+  position: relative;
+  padding-top: 10vh;
+
+  font-family: "Inter", sans-serif;
+}
+.weeklyScheduleContent {
+  border: 1px solid green;
+  height: 88vh;
+  width: 88%;
+  position: absolute;
+  right: 0;
+  margin: 0.5em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.dailyBox {
+    height: 21em;
+  border: 1px solid red;
+  position: relative;
+  padding: 2em 0  2em 0;
+}
+.appointmentBox{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 2px solid black;
+    height: 100%;
+    overflow: scroll;
+}
+.monday{grid-area: 1 / 1 / 2 / 2;}
+.tuesday{grid-area: 1 / 2 / 2 / 3;}
+.wednesday{ grid-area: 1 / 3 / 2 / 4;}
+.thursday{grid-area: 2 / 1 / 3 / 2;}
+.friday{grid-area: 2 / 2 / 3 / 3;}
+.saturday{ grid-area: 2 / 3 / 3 / 4;}
+.scheduleDate {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+  padding: .5em 1em;
+  font-size: .5em;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.dayStuff{
+  font-size: .4em;
+  position: absolute;
+  bottom: 0;
+}
+.dayStuff div{
+    display: flex;
+}
+.dayStuffName{
+  color: rgba(0, 0, 0, .5);
+}
+.logOutBtn {
+  border: 2px solid #ff5858;
+  color: #ff5858;
+  padding: 1em 2em;
+  font-weight: 600;
+  width: 10%;
+  margin: 0.5em;
+  font-size: 1em;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
