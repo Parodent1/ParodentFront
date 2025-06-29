@@ -1,12 +1,18 @@
 .appointmentBody{
-    border: 1px solid red;
     width: 100%;
     height: fit-content;
     box-sizing: border-box;
+    border: 2px solid red;
+    padding: .5em;
+    border-radius: 10px;
+    background-color: rgba(255, 88, 88, .5);
 }
 .clientName{
     font-size: 1em;
 }
 .appointmentTime{
     font-size: 1em;
+}
+.coment{
+    font-size: .8em;
 }
