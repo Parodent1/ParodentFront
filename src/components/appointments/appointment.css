@@ -1,18 +1,46 @@
-.appointmentBody{
+.appointmentBody {
     width: 100%;
     height: fit-content;
     box-sizing: border-box;
-    border: 2px solid red;
-    padding: .5em;
+    border: 2px solid rgba(137, 206, 255, 1);;
+    padding: 0.5em;
     border-radius: 10px;
-    background-color: rgba(255, 88, 88, .5);
-}
-.clientName{
-    font-size: 1em;
-}
-.appointmentTime{
-    font-size: 1em;
-}
-.coment{
-    font-size: .8em;
-}
+    background-color: rgba(137, 206, 255, 0.2);
+    user-select: none;
+    position: relative; 
+  }
+  
+  .clientName,
+  .appointmentTime {
+    font-size: 1.5em;
+  }
+  .complaints{
+    font-size: 1.2em;
+  }
+  .coment {
+    font-size: 1.2em;
+  }
+  
+  .contextMenu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid red;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .contextMenu button {
+    border: none;
+    background: none;
+    padding: 0.5em;
+    text-align: left;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  
+  .contextMenu button:hover {
+    background-color: #eee;
+  }

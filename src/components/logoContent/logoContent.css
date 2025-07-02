@@ -3,8 +3,8 @@
   height: fit-content;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: absolute;
+  align-items: start;
   top: 0;
   left: 0;
   width: 10%;
@@ -13,10 +13,10 @@
 .logoContentText {
   text-transform: uppercase;
   height: fit-content;
-  font-size: 2em;
+  font-size: 3em;
   font-family: "Inter", sans-serif;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   color: #000000;
 }
 .mainContentLetter {
