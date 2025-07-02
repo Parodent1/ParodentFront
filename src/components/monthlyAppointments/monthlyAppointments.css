@@ -1,0 +1,9 @@
+.monthlyAppointmentsBody{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: fit-content;
+    margin: .2em;
+}
+.appointmentTime{
+    font-size: .7em;   
+}

@@ -48,8 +48,8 @@ function WeeklySchedule() {
             <h1>01.12</h1>
           </div>
           <div className="dayStuff">
-            <div><h1>лікар</h1><h1 className="dayStuffName">Тодосюк Данило</h1></div>
-            <div><h1>асистент</h1><h1 className="dayStuffName">Тодосюк Данило</h1></div>
+            <div><h1>лікар:</h1><h1 className="dayStuffName">Тодосюк Данило</h1></div>
+            <div><h1>асистент:</h1><h1 className="dayStuffName">Тодосюк Данило</h1></div>
           </div>
         </div>
         <div className="dailyBox thursday">
