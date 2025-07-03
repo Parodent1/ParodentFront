@@ -4,7 +4,7 @@ import './monthlyAppointments.css'
 function MonthlyAppointments() {
   return (
     <div className='monthlyAppointmentsBody'>
-      <div className="appointmentTime">
+      <div className="monthlyAppointmentTime">
         <h1>12:13-15:50</h1>
       </div>
     </div>
