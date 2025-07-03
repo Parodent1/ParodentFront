@@ -44,6 +44,9 @@
     gap: .2em;
     padding: .2em;
 }
+.daysContainer:hover{
+    background-color: rgba(145, 255, 174, .3);
+}
 .monthlyScheduleday{
     border: 1px solid black;
     width: 100%;
@@ -59,5 +62,8 @@
     font-size: 1em;
 }
 .monthlyAppointmentsBox{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
 }
