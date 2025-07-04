@@ -4,6 +4,7 @@ import SignIn from "./pages/signIn/SignIn"
 import WeeklySchedule from "./pages/weeklySchedule/WeeklySchedule"
 import Reception from "./pages/reception/Reception"
 import MonthlySchedule from "./pages/monthlySchedule/MonthlySchedule"
+import AllClients from "./pages/allClients/AllClients"
 import './app.css'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <SignUp/>
       <WeeklySchedule/>
       <MonthlySchedule/>
+      <AllClients/>
       {/* <Reception/> */}
     </div>
   )
