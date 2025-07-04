@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.allClientsBody{
+    position: relative;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+}
+.allClientsContent{
+    height: 88vh;
+    width: 88%;
+    margin: .5em;
+    position: absolute; 
+    bottom: 0;
+    right: 0;
+}
+.allClientsContent th,
+.allClientsContent tr,
+.allClientsContent td,
+.allClientsContent table{
+    border: 2px solid black;
+    font-size: 1.2em;
+    text-align: center;
+}
+.allClientsContent th{
+    height: 2em;
+}
+.allClientsContent td{
+    max-height: fit-content;
+}
+.allClientsContent table{
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid black;
+}
