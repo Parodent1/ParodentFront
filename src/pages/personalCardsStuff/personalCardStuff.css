@@ -1,0 +1,29 @@
+.personalCardStuffBody{
+    height: 100vh;
+    position: relative;
+    padding-top: 10vh;
+    font-family: "Inter", sans-serif;
+}
+.personalCardStuffContent{
+    height: 88vh;
+    width: 88%;
+    position: absolute;
+    right: 0;
+    margin: 0.5em;
+    display: flex;
+    align-items: start;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 1em;
+}
+.doctorName{
+    display: flex;
+    gap: 1em;
+    font-size: 2em;
+}
+.doctorBiography{
+    font-size: 2em;
+    width: 80%;
+}
