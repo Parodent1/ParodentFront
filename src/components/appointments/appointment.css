@@ -9,12 +9,14 @@
     user-select: none;
     position: relative; 
   }
-  
-  .clientName{
-    font-size: 1.5em;
+  .appointmentHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
+  .clientName,
   .appointmentTime{
-    font-size: 1em;
+    font-size: 1.5em;
   }
   .complaints{
     font-size: 1.2em;

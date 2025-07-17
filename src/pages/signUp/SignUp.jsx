@@ -10,6 +10,9 @@ function SignUp() {
     password: "",
     name: "",
     surname: "",
+    lastname: "",
+    phoneNumber: "",
+    birth: ""
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -63,6 +66,33 @@ function SignUp() {
           name="surname"
           placeholder="Прізвище"
           value={formData.surname}
+          onChange={handleChange}
+          required
+        />
+        <input
+         className="signUpInput"
+          type="text"
+          name="lastname"
+          placeholder="Побатькові"
+          value={formData.lastname}
+          onChange={handleChange}
+          required
+        />
+        <input
+         className="signUpInput"
+          type="number"
+          name="phoneNumber"
+          placeholder="Номер телефону"
+          value={formData.phoneNumber}
+          onChange={handleChange}
+          required
+        />
+        <input
+         className="signUpInput"
+          type="number"
+          name="birth"
+          placeholder="Дата народження"
+          value={formData.birth}
           onChange={handleChange}
           required
         />

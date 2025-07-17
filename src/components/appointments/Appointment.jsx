@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './appointment.css'
 
+
 function Appointment() {
   // const [menuVisible, setMenuVisible] = useState(false);
   // const [menuPosition, setMenuPosition] = useState({ x: 0, y: 0 });
@@ -21,10 +22,13 @@ function Appointment() {
       // onContextMenu={handleContextMenu}
       // onClick={handleClickOutside}
     >
-      <h1 className="clientName">Данило</h1>
-      <h1 className="appointmentTime">11:23–12:39</h1>
+      <div className="appointmentHeader">
+      <h1 className="clientName">Заяць Данило Ігорович</h1>
+      <h1 className="appointmentTime">11:23–12:39</h1>        
+      </div>
+
       <p className="complaints">Біль в 8 зубі</p>
-      <p className="coment">агресивний пацієнт jkdsn wlefnkwe lweknflweknf f</p>
+      <p className="coment">агресивний пацієнт </p>
 
       {/* {menuVisible && (
         <div

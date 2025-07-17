@@ -16,7 +16,8 @@ function AllClients() {
               <th>ПІБ</th>
               <th>Посада</th>
               <th>Кабінет</th>
-              <th>Кабінет</th>
+              <th>Телефон</th>
+              <th>E-mail</th>
             </tr>
           </thead>
           <tbody>
@@ -31,11 +32,15 @@ function AllClients() {
               <td>Тодосюк Данило</td>
               <td>Лікар</td>
               <td>204</td>
+              <td>+38 (063) 272 50 59</td>
+              <td>yura0092@gmail.com</td>
             </tr>
             <tr>
               <td>Іваненко Олена</td>
               <td>Асистент</td>
               <td>205</td>
+              <td>+38 (063) 272 50 59</td>
+              <td>yura0092@gmail.com</td>
             </tr>
           </tbody>
         </table>

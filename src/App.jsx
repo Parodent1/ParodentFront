@@ -5,6 +5,7 @@ import WeeklySchedule from "./pages/weeklySchedule/WeeklySchedule"
 import Reception from "./pages/reception/Reception"
 import MonthlySchedule from "./pages/monthlySchedule/MonthlySchedule"
 import AllClients from "./pages/allClients/AllClients"
+import PersonalCardsStuff from "./pages/personalCardsStuff/PersonalCardsStuff"
 import './app.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <WeeklySchedule/>
       <MonthlySchedule/>
       <AllClients/>
+    <PersonalCardsStuff/>
       {/* <Reception/> */}
     </div>
   )
