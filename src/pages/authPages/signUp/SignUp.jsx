@@ -1,4 +1,4 @@
-import Logo from "../../components/logoSing/Logo";
+import Logo from "../../../components/logoSing/Logo";
 import React, { useState } from "react";
 import "./signUp.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

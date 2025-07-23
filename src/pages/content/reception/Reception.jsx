@@ -1,8 +1,7 @@
-import React from "react";
+
 import "./reception.css";
-import LogoContent from "../../components/logoContent/LogoContent";
-import NavBar from "../../components/navBar/NavBar";
-import Appointment from '../../components/appointments/Appointment'
+import LogoContent from "../../../components/logoContent/LogoContent";
+import NavBar from "../../../components/navBar/NavBar";
 
 function Reception() {
   return (

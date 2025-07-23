@@ -1,8 +1,8 @@
-import React from "react";
+
 import "./monthlySchedule.css";
-import LogoContent from "../../components/logoContent/LogoContent";
-import NavBar from "../../components/navBar/NavBar";
-import MonthlyAppointments from "../../components/monthlyAppointments/MonthlyAppointments";
+import LogoContent from "../../../components/logoContent/LogoContent";
+import NavBar from "../../../components/navBar/NavBar";
+import MonthlyAppointments from "../../../components/monthlyAppointments/MonthlyAppointments";
 
 function MonthlySchedule() {
   return (

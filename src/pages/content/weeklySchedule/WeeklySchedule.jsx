@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+
 import "./weeklySchedule.css";
-import LogoContent from "../../components/logoContent/LogoContent";
-import NavBar from "../../components/navBar/NavBar";
-import Appointment from "../../components/appointments/Appointment";
+import LogoContent from "../../../components/logoContent/LogoContent";
+import NavBar from "../../../components/navBar/NavBar";
+import Appointment from "../../../components/appointments/Appointment";
 
 function WeeklySchedule() {
   return (

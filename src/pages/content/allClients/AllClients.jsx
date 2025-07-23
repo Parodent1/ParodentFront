@@ -1,8 +1,8 @@
-import React from "react";
+
 import "./allClients.css";
 
-import NavBar from "../../components/navBar/NavBar";
-import LogoContent from "../../components/logoContent/LogoContent";
+import NavBar from "../../../components/navBar/NavBar";
+import LogoContent from "../../../components/logoContent/LogoContent";
 
 function AllClients() {
   return (

@@ -1,26 +1,29 @@
-import SignUp from "./pages/signUp/SignUp"
-import SignIn from "./pages/signIn/SignIn"
+import SignUp from "./pages/authPages/signUp/SignUp";
+import SignIn from "./pages/authPages/signIn/SignIn";
 
-import WeeklySchedule from "./pages/weeklySchedule/WeeklySchedule"
-import Reception from "./pages/reception/Reception"
-import MonthlySchedule from "./pages/monthlySchedule/MonthlySchedule"
-import AllClients from "./pages/allClients/AllClients"
-import PersonalCardsStuff from "./pages/personalCardsStuff/PersonalCardsStuff"
-import './app.css'
+import WeeklySchedule from "./pages/content/weeklySchedule/WeeklySchedule";
+import MonthlySchedule from "./pages/content/monthlySchedule/MonthlySchedule";
+import AllClients from "./pages/content/allClients/AllClients";
+import PersonalCardsStuff from "./pages/content/personalCardsStuff/PersonalCardsStuff";
+import "./app.css";
+import { useState } from "react";
 
 function App() {
+  const [showPopup, setShowPopup] = useState(false);
 
+ const handlePopup = () => {
+    setShowPopup(!showPopup);
+  };
   return (
     <div className="appBody">
-      <SignIn/>
-      <SignUp/>
-      <WeeklySchedule/>
-      <MonthlySchedule/>
-      <AllClients/>
-    <PersonalCardsStuff/>
-      {/* <Reception/> */}
+      <SignIn />
+      <SignUp />
+      <WeeklySchedule />
+      <MonthlySchedule />
+      <AllClients />
+      <PersonalCardsStuff />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

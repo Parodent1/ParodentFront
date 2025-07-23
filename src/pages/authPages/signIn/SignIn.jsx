@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import "../signUp/SignUp.css";
-import Logo from "../../components/logoSing/Logo"
+import Logo from "../../../components/logoSing/Logo"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
