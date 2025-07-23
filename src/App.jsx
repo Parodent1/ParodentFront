@@ -6,21 +6,16 @@ import MonthlySchedule from "./pages/content/monthlySchedule/MonthlySchedule";
 import AllClients from "./pages/content/allClients/AllClients";
 import PersonalCardsStuff from "./pages/content/personalCardsStuff/PersonalCardsStuff";
 import "./app.css";
-import { useState } from "react";
 
 function App() {
-  const [showPopup, setShowPopup] = useState(false);
 
- const handlePopup = () => {
-    setShowPopup(!showPopup);
-  };
   return (
     <div className="appBody">
       <SignIn />
       <SignUp />
       <WeeklySchedule />
       <MonthlySchedule />
-      <AllClients />
+      <AllClients/>
       <PersonalCardsStuff />
     </div>
   );
