@@ -1,12 +1,15 @@
 import './app.css';
 import Header from './components/header/Header';
+import { AppointmentTabsProvider } from './context/AppointmentTabsContext';
 import Content from './pages/content/Content';
 
 function App() {
   return (
     <div className='appBody'>
-      <Header />
-      <Content />
+      <AppointmentTabsProvider>
+        <Header />
+        <Content/>
+      </AppointmentTabsProvider>
     </div>
   );
 }

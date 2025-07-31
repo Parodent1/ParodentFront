@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "./appointmentActionBtn.css";
 import Calendar from "./calendar/Calendar";
 import AppointmentCreation from "./appointmenstCreation/AppointmentsCreation";
+import { useAppointmentTabs } from "../../../context/AppointmentTabsContext";
 
 function AppointmentActionBtn() {
   const [showCalendar, setShowCalendar] = useState(false);
-  const [selectedDoctor, setSelectedDoctor] = useState("");
+  const { selectedTab, setSelectedTab } = useAppointmentTabs();
   const [showAppointmentCreation, setShowAppointmentCreation] = useState(false);
   const [selectedDate, setSelectedDate] = useState(new Date());
 
@@ -15,11 +16,12 @@ function AppointmentActionBtn() {
     return `${dayStr}.${monthStr}.${selectedDate.getFullYear()}`;
   };
 
-  const handleSelectDoctor = (e) => {
-    setSelectedDoctor(e.target.value);
-  };
+const handleSelectSchedule = (e) => {
+  setSelectedTab(e.target.value);
+};
 
   const doctors = ["Дмитро Тодосюк", "Андрій Коваленко", "Наталія Сидоренко"];
+
   return (
     <div className="calendarContainer">
       <div className="calendarContainerContent">
@@ -27,10 +29,9 @@ function AppointmentActionBtn() {
           className="ActionBtn"
           onClick={() => setShowCalendar(!showCalendar)}
         >
-          <span class="material-symbols-outlined" style={{ color: "#FF5858" }}>
+          <span className="material-symbols-outlined" style={{ color: "#FF5858" }}>
             calendar_month
           </span>
-
           {formatSelectedDate()}
         </button>
 
@@ -48,18 +49,17 @@ function AppointmentActionBtn() {
       </div>
       <div className="rightGroup">
         <div className="ActionBtn">
-          <span class="material-symbols-outlined"
-          style={{ color: "#FF5858" }}>
-person
-</span>
+          <span className="material-symbols-outlined" style={{ color: "#FF5858" }}>
+            person
+          </span>
           <select
             name="doctor"
             id="doctor"
-            value={selectedDoctor}
-            onChange={handleSelectDoctor}
+  value={selectedTab}
+  onChange={handleSelectSchedule}
             className="doctorSelectBtn"
           >
-            <option value="">All clinic</option>
+            <option value="allClinic">All clinic</option>
             {doctors.map((doctor, index) => (
               <option key={index} value={doctor}>
                 {doctor}
@@ -72,10 +72,7 @@ person
             className="ActionBtn"
             onClick={() => setShowAppointmentCreation(!showAppointmentCreation)}
           >
-            <span
-              class="material-symbols-outlined"
-              style={{ color: "#FF5858" }}
-            >
+            <span className="material-symbols-outlined" style={{ color: "#FF5858" }}>
               add_circle
             </span>
             Create appointment
@@ -83,10 +80,7 @@ person
 
           {showAppointmentCreation && (
             <div className="appointmentCreationBox">
-              <AppointmentCreation
-                setShowAppointmentCreation={setShowAppointmentCreation}
-                showAppointmentCreation={showAppointmentCreation}
-              />
+              <AppointmentCreation />
             </div>
           )}
         </div>
@@ -96,5 +90,3 @@ person
 }
 
 export default AppointmentActionBtn;
-
-// біля створення запису чекбокс мій розклад на тиждень

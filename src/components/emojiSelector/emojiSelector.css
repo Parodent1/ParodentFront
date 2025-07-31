@@ -1,5 +1,6 @@
 .emojiDropdownWrapper {
-position: relative;
+position: absolute;
+z-index: 1000;
 display: inline-block;
 }
 

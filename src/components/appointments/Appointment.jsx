@@ -7,13 +7,13 @@ function Appointment( ) {
     console.log("Обрана емодзі:", emoji);
   };
   return (
-    <div className="appointmentBody">
+    <div className="allClinicAppointmentBody">
       <div className="appointmentHeader">
         <h1 className="clientName">Заяць Андрій</h1>
         <h1 className="appointmentTime">10:23-11:33</h1>
       </div>
-      <div className="appointmentsComplains">
-        <p className="complaints">Біль в 8 зубі</p>
+      <div className="appointmentBottom">
+      <div className="appointmentsComments">
         <p className="coment">Коментар</p>
       </div>
       <div className="appointmentsEmoji">
@@ -21,6 +21,7 @@ function Appointment( ) {
           emojiKey="doctorEmoji"
           onEmojiChange={handleEmojiChange}
         />
+      </div>
       </div>
     </div>
     // <div className="appointmentBody">

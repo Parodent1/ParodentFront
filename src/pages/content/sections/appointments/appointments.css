@@ -1,13 +1,24 @@
 .appointmentsContent {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 1em;
   height: 83vh;
   padding: 1em;
 }
 
-.room {
+.allClinicTabContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1em;
+}
+
+.personalTabContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1em;
+}
+
+.room,
+.day {
   border-radius: 20px;
   padding: 1em;
   background-color: var(--white-color);
@@ -21,7 +32,8 @@
 .roomPersonal{
 } */
 
-.roomName {
+.roomName,
+.dayName {
   height: 1.5em;
   font-weight: 400;
   display: flex;
@@ -31,9 +43,23 @@
 .appointmentContainer {
   display: flex;
   flex-direction: column;
-  gap: 0.2em;
+  gap: 0.5em;
   height: 17.7em;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.appointmentPersonalContainer {
+  height: 19em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 30px;
 }
 
 .roomPersonal {
