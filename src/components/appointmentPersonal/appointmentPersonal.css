@@ -1,0 +1,37 @@
+.appointmentPersonalBody {
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  background-color: var(--grey-color);
+  padding: 1em;
+  border-radius: 30px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
+}
+.appointmentPersonalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.clientName,
+.appointmentPersonalTime {
+  font-size: 1em;
+}
+.appointmentPersonalBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.appointmentPersonalsComplains {
+  width: 90%;
+  flex-wrap: wrap;
+}
+.coment {
+  font-size: 0.8em;
+}
+.appointmentPersonalsEmoji {
+    position: relative;
+    bottom: 1em;
+    right: 2em;
+  margin-right: 1em;
+}
