@@ -80,7 +80,7 @@ function Header() {
         <div className="profileConteiner">
           <div className="profileImg"></div>
           <div className="profileInfo">
-            <h4 className="doctorName">Тодосюк Данило</h4>
+            <h4 className="doctorName">Тодосюк Данилоф</h4>
             <h4 className="doctorRole">Логопедик</h4>
           </div>
         </div>
