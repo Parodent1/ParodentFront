@@ -1,0 +1,55 @@
+.calendarContainer {
+    padding: .3em;
+    background-color: var(--white-color);
+    border-radius: 9999px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ActionBtn {
+    text-decoration: none;
+    font-size: 1em;
+    color: var(--black-color);
+    background-color: var(--grey-color);
+    border-radius: 9999px;
+    border: none;
+    padding: 0.5em;
+    height: 100%;
+    position: relative;
+    z-index: 1000;
+    transition: color 0.3s ease;
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ActionBtn:active,
+.ActionBtn:hover {
+    background-color: var(--grey-color);
+}
+
+.calendarBox{
+    position: fixed;
+    z-index: 1000;
+}
+
+.rightGroup{
+    display: flex;
+    gap: 1em;
+}
+
+.doctorSelectBtn{
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    border: none;
+    background-color: var(--grey-color);
+}
+
+.appointmentCreationBox{
+    position: fixed;
+    right: 1.3em;
+    z-index: 1000;
+}

@@ -1,0 +1,47 @@
+.appointmentsContent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1em;
+  height: 83vh;
+  padding: 1em;
+}
+
+.room {
+  border-radius: 20px;
+  padding: 1em;
+  background-color: var(--white-color);
+  position: relative;
+  height: 22.5em;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* .roomName,
+.appointmentContainer,
+.roomPersonal{
+} */
+
+.roomName {
+  height: 1.5em;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+
+.appointmentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2em;
+  height: 17.7em;
+  overflow: scroll;
+}
+
+.roomPersonal {
+  height: 1.2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.roomPersonal h5 {
+  font-weight: 300;
+}
