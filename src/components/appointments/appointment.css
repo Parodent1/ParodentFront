@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-.appointmentBody {
-    display: flex;
-    width: 100%;
-    background-color: var(--grey-color);
-    padding: .5em;
-    border-radius: 9999px;
-}
-.appointmentHeader{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-.clientName,
-.appointmentTime{
-    font-size: 1em;
-}
-.appointmentsComplains{
-    width: 50%;
-    flex-wrap: wrap;
-}
-.complaints{
-    font-size: .8em;
-}
-.coment {
-    font-size: .8em;
-}
-.appointmentsEmoji{
-    margin-right: 1em;
-}
-=======
 .allClinicAppointmentBody {
   display: flex;
   flex-direction: column;
@@ -68,4 +36,3 @@
     right: 2em;
   margin-right: 1em;
 }
->>>>>>> 33cbe627c445291d1b8df11be8f7f3892ffaee8b

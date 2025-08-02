@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 * {
@@ -18,25 +17,4 @@
     --dark-grey-color: #e2e2e2;
     --black-color: #03050c;
     --blue-color: #3B60E4;
-=======
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Lexend", sans-serif;
-}
-
-.appBody {
-    background-color: var(--grey-color);
-}
-
-:root {
-    --white-color: #FFFFFF;
-    --grey-color: #eeeeee;
-    --dark-grey-color: #e2e2e2;
-    --black-color: #03050c;
-    --blue-color: #3B60E4;
->>>>>>> 33cbe627c445291d1b8df11be8f7f3892ffaee8b
 }
