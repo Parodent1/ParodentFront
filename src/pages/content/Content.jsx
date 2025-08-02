@@ -3,6 +3,7 @@ import Dashboard from './sections/dashboard/Dashboard';
 import Appointments from './sections/appointments/Appointments';
 import Patients from './sections/patients/Patients';
 import Stuff from './sections/stuff/Stuff';
+import Login from '../authPages/login/Login'
 
 import './content.css'
 

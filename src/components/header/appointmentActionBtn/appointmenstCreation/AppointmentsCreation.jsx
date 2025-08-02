@@ -1,8 +1,14 @@
 import { useState } from "react";
 import "./appointmenstCreation.css";
 import TimeInput from "./timeInput/TimeInput";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser, faComment } from "@fortawesome/free-solid-svg-icons";
 
-function AppointmentCreation({setShowAppointmentCreation, onCreateAppointment, doctorName }) {
+function AppointmentCreation({
+  setShowAppointmentCreation,
+  onCreateAppointment,
+  doctorName,
+}) {
   const [formData, setFormData] = useState({
     name: "",
     comment: "",
@@ -33,22 +39,25 @@ function AppointmentCreation({setShowAppointmentCreation, onCreateAppointment, d
   };
 
   return (
-    <div className="appointmentCreationBody" 
-  onClick={() => setShowAppointmentCreation(false)}
->
-
+    <div
+      className="appointmentModalOverlay"
+      onClick={() => setShowAppointmentCreation(false)}
+    >
       <div
-        className="appointmentCreationContent"
+        className="appointmentModalContent"
         onClick={(e) => e.stopPropagation()}
       >
-        <form onSubmit={handleSubmit} className="appointmentCreationForm">
-          <div className="coolinput">
-            <label className="text" htmlFor="name">Full Name</label>
+        <form onSubmit={handleSubmit} className="appointmentForm">
+          <div className="flex-column">
+            <label>Full Name</label>
+          </div>
+          <div className="inputForm">
+            <FontAwesomeIcon icon={faUser} style={{ color: "#FF5858" }}/>
             <input
               id="name"
               name="name"
               type="text"
-              placeholder="Write here..."
+              placeholder="Write patient name..."
               className="input"
               value={formData.name}
               onChange={handleChange}
@@ -56,32 +65,28 @@ function AppointmentCreation({setShowAppointmentCreation, onCreateAppointment, d
             />
           </div>
 
-          <div className="coolinput">
-            <label className="text" htmlFor="comment">
-              <span class="material-symbols-outlined" style={{ color: "#FF5858" }}>
-comment
-</span>
-              Comment</label>
+          <div className="flex-column">
+            <label>Comment</label>
+          </div>
+          <div className="inputForm">
+            <FontAwesomeIcon icon={faComment} style={{ color: "#FF5858" }}/>
             <input
               id="comment"
               name="comment"
               type="text"
-              placeholder="Write here..."
+              placeholder="Write a comment..."
               className="input"
               value={formData.comment}
               onChange={handleChange}
+              required
             />
           </div>
 
-          <div className="coolinput timeInput">
             <TimeInput onTimeSelect={handleTimeSelect} />
-          </div>
 
-          <div className="appointmentCreationBtnContainer">
-            <button type="submit" className="createAppointmentBTN">
-              Створити запис
-            </button>
-          </div>
+          <button type="submit" className="button-submit">
+            Створити запис
+          </button>
         </form>
       </div>
     </div>

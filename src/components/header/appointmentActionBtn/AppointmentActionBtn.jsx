@@ -80,7 +80,7 @@ const handleSelectSchedule = (e) => {
 
           {showAppointmentCreation && (
             <div className="appointmentCreationBox">
-              <AppointmentCreation />
+              <AppointmentCreation setShowAppointmentCreation={setShowAppointmentCreation} />
             </div>
           )}
         </div>

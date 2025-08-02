@@ -34,18 +34,24 @@ function Calendar({ setShowCalendar, onDateSelect, initialDate }) {
     setSelectedDay(day);
     if (onDateSelect) {
       onDateSelect(day, month, year);
-    } else {
+    }
+    setShowCalendar(false);
+  };
+
+  // 👇 Закриває календар тільки коли клік по фону
+  const handleBackgroundClick = (e) => {
+    if (e.target.classList.contains("calendarBody")) {
       setShowCalendar(false);
     }
   };
 
   return (
-    <div className="calendarBody" onClick={() => setShowCalendar(false)}>
-      <div className="calendarContent" onClick={(e) => e.stopPropagation()}>
+    <div className="calendarBody" onClick={handleBackgroundClick}>
+      <div className="calendarContent">
         <div className="calendarHeader">
           <button onClick={() => handleMonthChange(-1)}>
             <span
-              class="material-symbols-outlined"
+              className="material-symbols-outlined"
               style={{ color: "#FF5858", cursor: "pointer" }}
             >
               arrow_back_ios
@@ -59,7 +65,7 @@ function Calendar({ setShowCalendar, onDateSelect, initialDate }) {
           </h2>
           <button onClick={() => handleMonthChange(1)}>
             <span
-              class="material-symbols-outlined"
+              className="material-symbols-outlined"
               style={{ color: "#FF5858", cursor: "pointer" }}
             >
               arrow_forward_ios
