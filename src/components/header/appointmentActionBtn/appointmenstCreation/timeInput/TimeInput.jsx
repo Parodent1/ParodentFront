@@ -3,10 +3,16 @@ import "./timeInput.css";
 import Calendar from "../../calendar/Calendar"; // не забудь, якщо використовуєш календар
 
 function TimeInput({ onTimeSelect }) {
+  const [selectDoctor, setSelectDoctor] = useState("")
   const [startTime, setStartTime] = useState("");
   const [duration, setDuration] = useState("");
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [showCalendar, setShowCalendar] = useState(false);
+  const doctors = ["Дмитро Тодосюк", "Андрій Коваленко", "Наталія Сидоренко"];
+
+  const handleSelectDoctor = (e) => {
+    setSelectDoctor(e.target.value);
+  };
 
   const formatSelectedDate = () => {
     const dayStr = String(selectedDate.getDate()).padStart(2, "0");
@@ -77,6 +83,24 @@ function TimeInput({ onTimeSelect }) {
           }}
           required
         />
+      </div>
+
+      <div className="coolinput">
+        <label className="text">Choose doctor</label>
+          <select
+            name="doctor"
+            id="doctor"
+  value={selectDoctor}
+  onChange={handleSelectDoctor}
+            className="dateInput"
+          >
+            <option value="allClinic">Choose doctor</option>
+            {doctors.map((doctor, index) => (
+              <option key={index} value={doctor}>
+                {doctor}
+              </option>
+            ))}
+          </select>
       </div>
     </form>
   );
