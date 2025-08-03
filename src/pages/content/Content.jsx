@@ -2,8 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Dashboard from './sections/dashboard/Dashboard';
 import Appointments from './sections/appointments/Appointments';
 import Patients from './sections/patients/Patients';
-import Stuff from './sections/stuff/Stuff';
-import Login from '../authPages/login/Login'
+import Staff from './sections/staff/Staff';
 
 import './content.css'
 
@@ -15,7 +14,7 @@ function Content() {
         <Route path='/appointments' element={<Appointments />} />
         <Route path='/dashboard' element={<Dashboard />} />
         <Route path='/patients' element={<Patients />} />
-        <Route path='/stuff' element={<Stuff />} />
+        <Route path='/staff' element={<Staff />} />
       </Routes>
     </div>
   );

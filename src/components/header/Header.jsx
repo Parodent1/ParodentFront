@@ -7,7 +7,7 @@ import logo from '../../assets/logo.png'
 import AppointmentActionBtn from './appointmentActionBtn/AppointmentActionBtn'
 import DashboardActionBtn from './dashboardActionBtn/DashboardActionBtn'
 import PatientsActionBtn from './patientsActionBtn/PatientActionBtn'
-import StuffActionBtn from './stuffActionBtn/StuffActionBtn'
+import StaffActionBtn from './staffActionBtn/StaffActionBtn'
 
 function Header() {
   const location = useLocation();
@@ -17,7 +17,7 @@ function Header() {
     { path: "/dashboard", label: "Dashboard" },
     { path: "/patients", label: "Patients" },
     { path: "/appointments", label: "Appointments" },
-    { path: "/stuff", label: "Stuff" },
+    { path: "/staff", label: "Staff" },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -91,7 +91,7 @@ function Header() {
         <Route path='/appointments' element={<AppointmentActionBtn />} />
         <Route path='/dashboard' element={<DashboardActionBtn />} />
         <Route path='/patients' element={<PatientsActionBtn />} />
-        <Route path='/stuff' element={<StuffActionBtn />} />
+        <Route path='/staff' element={<StaffActionBtn />} />
       </Routes>
       </div>
     </div>

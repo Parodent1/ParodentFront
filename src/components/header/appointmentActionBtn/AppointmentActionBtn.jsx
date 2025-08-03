@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import "./appointmentActionBtn.css";
+import '../actionBtn.css'
 import Calendar from "./calendar/Calendar";
 import AppointmentCreation from "./appointmenstCreation/AppointmentsCreation";
 import { useAppointmentTabs } from "../../../context/AppointmentTabsContext";
 
 function AppointmentActionBtn() {
+
   const [showCalendar, setShowCalendar] = useState(false);
   const { selectedTab, setSelectedTab } = useAppointmentTabs();
   const [showAppointmentCreation, setShowAppointmentCreation] = useState(false);
@@ -16,15 +18,15 @@ function AppointmentActionBtn() {
     return `${dayStr}.${monthStr}.${selectedDate.getFullYear()}`;
   };
 
-const handleSelectSchedule = (e) => {
-  setSelectedTab(e.target.value);
-};
+  const handleSelectSchedule = (e) => {
+    setSelectedTab(e.target.value);
+  };
 
   const doctors = ["Дмитро Тодосюк", "Андрій Коваленко", "Наталія Сидоренко"];
 
   return (
-    <div className="calendarContainer">
-      <div className="calendarContainerContent">
+    <div className="actionBtnBody">
+      <div className="leftGroup">
         <button
           className="ActionBtn"
           onClick={() => setShowCalendar(!showCalendar)}
@@ -57,7 +59,7 @@ const handleSelectSchedule = (e) => {
             id="doctor"
   value={selectedTab}
   onChange={handleSelectSchedule}
-            className="doctorSelectBtn"
+            className="SelectBtn"
           >
             <option value="allClinic">All clinic</option>
             {doctors.map((doctor, index) => (

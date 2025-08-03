@@ -27,7 +27,6 @@ function Appointments() {
   const { selectedTab } = useAppointmentTabs();
 
   return (
-    <div className="appointmentsBody">
       <div className="appointmentsContent">
         {selectedTab === "allClinic" ? (
           <div className="allClinicTabContainer">
@@ -80,7 +79,6 @@ calendar_today
           </div>
         )}
       </div>
-    </div>
   );
 }
 

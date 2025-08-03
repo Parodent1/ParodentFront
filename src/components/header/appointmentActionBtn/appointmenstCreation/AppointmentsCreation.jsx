@@ -1,8 +1,6 @@
 import { useState } from "react";
 import "./appointmenstCreation.css";
 import TimeInput from "./timeInput/TimeInput";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faComment } from "@fortawesome/free-solid-svg-icons";
 
 function AppointmentCreation({
   setShowAppointmentCreation,
@@ -52,7 +50,9 @@ function AppointmentCreation({
             <label>Full Name</label>
           </div>
           <div className="inputForm">
-            <FontAwesomeIcon icon={faUser} style={{ color: "#FF5858" }}/>
+            <span class="material-symbols-outlined" style={{ color: "#FF5858" }}>
+person
+</span>
             <input
               id="name"
               name="name"
@@ -69,7 +69,9 @@ function AppointmentCreation({
             <label>Comment</label>
           </div>
           <div className="inputForm">
-            <FontAwesomeIcon icon={faComment} style={{ color: "#FF5858" }}/>
+            <span class="material-symbols-outlined" style={{ color: "#FF5858" }}>
+comment
+</span>
             <input
               id="comment"
               name="comment"
