@@ -1,0 +1,13 @@
+# .gitignore
+parodent-bd5b2-firebase-adminsdk-fbsvc-fe77982253.json
+secrets/parodent.json
+build/secrets/
+*.json
+!package.json
+!tsconfig.json
+.parodent*
+secrets/
+build/secrets/
+node_modules
+cloudinary.ts
+.env
