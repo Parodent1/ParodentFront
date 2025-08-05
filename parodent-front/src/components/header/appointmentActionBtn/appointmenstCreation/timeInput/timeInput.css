@@ -1,0 +1,51 @@
+.manualTimeForm {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr); 
+  gap: 1em;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.coolinput {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.coolinput label.text {
+  font-weight: 600;
+}
+
+.coolinput .dateInput {
+  border: 1.5px solid #ecedec;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.coolinput .dateInput:focus {
+  outline: none;
+}
+
+.dateInput {
+  cursor: pointer;
+  background-color: var(--white-color);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+.timeCalendarCover {
+  margin-top: 8px;
+}
