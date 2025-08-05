@@ -5,6 +5,7 @@ import doctorRoutes from './routes/doctorRoutes'
 import cors from 'cors'
 import appointmentRoutes from './routes/appointmentRoutes'
 
+//
 
 const app = express()
 
