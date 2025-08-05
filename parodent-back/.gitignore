@@ -8,6 +8,7 @@ build/secrets/
 .parodent*
 secrets/
 build/secrets/
+build/cloudinary.js
 node_modules
 cloudinary.ts
 .env
