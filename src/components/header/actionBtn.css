@@ -31,5 +31,5 @@
 
 .ActionBtn:active,
 .ActionBtn:hover {
-    background-color: var(--grey-color);
+    background-color: var(--dark-grey-color);
 }

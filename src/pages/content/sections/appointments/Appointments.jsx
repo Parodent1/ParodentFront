@@ -27,58 +27,64 @@ function Appointments() {
   const { selectedTab } = useAppointmentTabs();
 
   return (
-      <div className="appointmentsContent">
-        {selectedTab === "allClinic" ? (
-          <div className="allClinicTabContainer">
-            {rooms.map((room) => (
-              <div className="room" key={room.id}>
-                <h3 className="roomName">
-                  <span
-                    className="material-symbols-outlined"
-                    style={{ color: "#FF5858" }}
-                  >
-                    door_back
-                  </span>
-                  Room {room.id}
-                </h3>
-                <div className="appointmentContainer">
-                  <Appointment />
-                  <Appointment />
-                  <Appointment />
-                  <Appointment />
-                  <Appointment />
-                  <Appointment />
-                  <Appointment />
-                  <Appointment />
-                </div>
-                <div className="roomPersonal">
-                  <h5>
-                    <span>Doctor</span>: {room.doctor}
-                  </h5>
-                  <h5>
-                    <span>Assistant</span>: {room.assistant}
-                  </h5>
-                </div>
+    <div className="appointmentsContent">
+      {selectedTab === "allClinic" ? (
+        <div className="allClinicTabContainer">
+          {rooms.map((room) => (
+            <div className="room" key={room.id}>
+              <h3 className="roomName">
+                <span
+                  className="material-symbols-outlined"
+                  style={{ color: "#FF5858" }}
+                >
+                  door_back
+                </span>
+                Room {room.id}
+              </h3>
+              <div className="appointmentContainer">
+                <Appointment />
+                <Appointment />
+                <Appointment />
+                <Appointment />
+                <Appointment />
+                <Appointment />
+                <Appointment />
+                <Appointment />
               </div>
-            ))}
-          </div>
-        ) : (
-          <div className="personalTabContainer">
-            {days.map((day) => (
-              <div className="day" key={day.id}>
-                <h3 className="dayName"><span class="material-symbols-outlined" style={{ color: "#FF5858" }}>
-calendar_today
-</span>{day.id}</h3>
-                <div className="appointmentPersonalContainer">
-                  <AppointmentPersonal />
-                  <AppointmentPersonal />
-                  <AppointmentPersonal />
-                </div>
+              <div className="roomPersonal">
+                <h5>
+                  <span>Doctor</span>: {room.doctor}
+                </h5>
+                <h5>
+                  <span>Assistant</span>: {room.assistant}
+                </h5>
               </div>
-            ))}
-          </div>
-        )}
-      </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="personalTabContainer">
+          {days.map((day) => (
+            <div className="day" key={day.id}>
+              <h3 className="dayName">
+                <span
+                  class="material-symbols-outlined"
+                  style={{ color: "#FF5858" }}
+                >
+                  calendar_today
+                </span>
+                {day.id}
+              </h3>
+              <div className="appointmentPersonalContainer">
+                <AppointmentPersonal />
+                <AppointmentPersonal />
+                <AppointmentPersonal />
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
   );
 }
 

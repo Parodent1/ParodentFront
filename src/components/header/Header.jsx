@@ -1,15 +1,23 @@
-import './header.css'
+import "./header.css";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import logo from '../../assets/logo.png'
-import AppointmentActionBtn from './appointmentActionBtn/AppointmentActionBtn'
-import DashboardActionBtn from './dashboardActionBtn/DashboardActionBtn'
-import PatientsActionBtn from './patientsActionBtn/PatientActionBtn'
-import StaffActionBtn from './staffActionBtn/StaffActionBtn'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+
+import logo from "../../assets/logo.png";
+import AppointmentActionBtn from "./appointmentActionBtn/AppointmentActionBtn";
+import DashboardActionBtn from "./dashboardActionBtn/DashboardActionBtn";
+import PatientsActionBtn from "./patientsActionBtn/PatientActionBtn";
+import StaffActionBtn from "./staffActionBtn/StaffActionBtn";
 
 function Header() {
+  const [showProfileModal, setProfileModal] = useState(false);
+  const handleProfileModal = () => {
+    setProfileModal(!showProfileModal);
+  };
+
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -25,7 +33,7 @@ function Header() {
   const [sliderStyle, setSliderStyle] = useState({});
 
   useEffect(() => {
-    const index = tabs.findIndex(tab => tab.path === currentPath);
+    const index = tabs.findIndex((tab) => tab.path === currentPath);
     setActiveIndex(index === -1 ? 0 : index);
   }, [currentPath]);
 
@@ -49,18 +57,24 @@ function Header() {
   }, [activeIndex]);
 
   return (
-    <div className='headerBody'>
+    <div className="headerBody">
       <div className="headerContent">
         <div className="headerLogo">
-          <img src={logo} alt="Logo"/>
+          <img src={logo} alt="Logo" />
           <h1>Parodent</h1>
         </div>
-        <div className="navBar" ref={navBarRef} style={{ position: 'relative' }}>
+        <div
+          className="navBar"
+          ref={navBarRef}
+          style={{ position: "relative" }}
+        >
           {tabs.map(({ path, label }, i) => (
             <Link
               key={path}
               to={path}
-              className={currentPath === path ? "navBarBtn active" : "navBarBtn"}
+              className={
+                currentPath === path ? "navBarBtn active" : "navBarBtn"
+              }
             >
               {label}
             </Link>
@@ -77,25 +91,56 @@ function Header() {
             }}
           />
         </div>
-        <div className="profileConteiner">
+        <div className="profileConteiner" onClick={handleProfileModal}>
           <div className="profileImg"></div>
           <div className="profileInfo">
             <h4 className="doctorName">Тодосюк Данилоф</h4>
             <h4 className="doctorRole">Логопедик</h4>
           </div>
+          <FontAwesomeIcon icon={faArrowDown} />
+          {showProfileModal && (
+            <div
+              className="profileModalBody"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="profileModalContent">
+                <button className="ActionBtn">
+                {" "}
+                <span
+                  class="material-symbols-outlined"
+                  style={{ color: "#FF5858" }}
+                >
+                  logout
+                </span>
+                Logout
+              </button>
+              <button className="ActionBtn">
+                {" "}
+                <span
+                  class="material-symbols-outlined"
+                  style={{ color: "#FF5858" }}
+                >
+                  settings
+                </span>
+                Settings
+              </button>
+            </div>
+              </div>
+              
+          )}
         </div>
       </div>
       <div className="AppointmentActionBtnContaier">
-      <Routes>
-        <Route path='/' element={<Navigate to='/appointments' />} />
-        <Route path='/appointments' element={<AppointmentActionBtn />} />
-        <Route path='/dashboard' element={<DashboardActionBtn />} />
-        <Route path='/patients' element={<PatientsActionBtn />} />
-        <Route path='/staff' element={<StaffActionBtn />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Navigate to="/appointments" />} />
+          <Route path="/appointments" element={<AppointmentActionBtn />} />
+          <Route path="/dashboard" element={<DashboardActionBtn />} />
+          <Route path="/patients" element={<PatientsActionBtn />} />
+          <Route path="/staff" element={<StaffActionBtn />} />
+        </Routes>
       </div>
     </div>
-  )
+  );
 }
 
 export default Header;

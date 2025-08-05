@@ -8,8 +8,8 @@ import PasswordRecover from './pages/authPages/passwordRecover/PasswordRecover';
 function App() {
   return (
     <div className='appBody'>
-      <Login/>
-      <PasswordRecover/>
+      {/* <Login/>
+      <PasswordRecover/> */}
       <AppointmentTabsProvider>
         <Header />
         <Content/>

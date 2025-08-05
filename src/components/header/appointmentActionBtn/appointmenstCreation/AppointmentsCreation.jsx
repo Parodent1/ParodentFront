@@ -86,7 +86,7 @@ comment
 
             <TimeInput onTimeSelect={handleTimeSelect} />
 
-          <button type="submit" className="button-submit">
+          <button type="submit" className="button-submit" onClick={() => setShowAppointmentCreation(false)}>
             Створити запис
           </button>
         </form>
